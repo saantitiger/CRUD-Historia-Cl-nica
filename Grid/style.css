@@ -1,0 +1,42 @@
+body {
+            display: grid;
+            grid-template-areas:
+                "nav header header"
+                "nav section aside"
+                "nav section2 aside"
+                "nav footer footer";
+            grid-template-rows: .5fr 200px 200px .75fr;
+            grid-template-columns: .2fr auto .3fr;
+            grid-gap: 10px;
+            height: 100vh;
+            margin: 0;
+        }
+
+        header,
+        footer,
+        section,
+        aside,
+        nav {
+            padding: 20px;
+            background: gold;
+        }
+
+        #pageHeader {
+            grid-area: header;
+        }
+
+        #pageFooter {
+            grid-area: footer;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #mainNav {
+            grid-area: nav;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
