@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.2.0/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Mantenimieno Personas</a>
+                <div id="navbarNav">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary ms-auto" onclick=showModal()>
+                        Agregar Persona
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="text-align:center;">
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar Persona</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="person-form">
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div data-mdb-input-init class="form-outline">
+                                        <input type="text" id="name" class="form-control" />
+                                        <label class="form-label" for="name">Nombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div data-mdb-input-init class="form-outline">
+                                        <input type="text" id="lastname" class="form-control" />
+                                        <label class="form-label" for="lastname">Apellido</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="email" id="mail" class="form-control" />
+                                <label class="form-label" for="mail">Correo Electrónico</label>
+                            </div>
+
+                            <!-- Submit buttons -->
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <button type="button" id="submit-local" data-mdb-button-init data-mdb-ripple-init
+                                        class="btn btn-primary btn-block mb-4">
+                                        Agregar Local
+                                    </button>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <button type="button" id="submit-session" data-mdb-button-init data-mdb-ripple-init
+                                        class="btn btn-primary btn-block mb-4">
+                                        Agregar Sesion
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="local-persons" class="mt-4">
+            <h2>Personas en LocalStorage</h2>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Correo</th>
+                            <th>Opciones</th> <!-- Added column for actions -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se mostrarán los pacientes -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="session-persons" class="mt-4">
+            <h2>Personas en SessionStorage</h2>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Correo</th>
+                            <th>Opciones</th> <!-- Added column for actions -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se mostrarán los pacientes -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="./scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.2.0/js/mdb.min.js"></script>
+</body>
+
+</html>
